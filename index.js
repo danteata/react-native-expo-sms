@@ -95,7 +95,7 @@ export async function requestSMSPermission() {
       return true
     const status = await PermissionsAndroid.requestMultiple([
       PermissionsAndroid.PERMISSIONS.RECEIVE_SMS,
-      PermissionsAndroid.PERMISSIONS.SMS_SMS,
+      PermissionsAndroid.PERMISSIONS.SEND_SMS,
     ])
     if (status === PermissionsAndroid.RESULTS.GRANTED) return true
     if (status === PermissionsAndroid.RESULTS.DENIED) {
